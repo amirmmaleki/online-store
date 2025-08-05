@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه آنلاین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-5">
+    <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">فروشگاه آنلاین</h1>
+        <p class="text-gray-600">بهترین محصولات را از ما بخرید</p>
+      </div>
+
+      <!-- Categories -->
+      <div class="flex flex-wrap gap-3 mb-8 justify-center">
+        <a
+          href="#electronics"
+          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
+          data-category="electronics"
+          >الکترونیک</a
+        >
+        <a
+          href="#clothing"
+          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
+          data-category="clothing"
+          >پوشاک</a
+        >
+        <a
+          href="#books"
+          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
+          data-category="books"
+          >کتاب</a
+        >
+        <a
+          href="#home"
+          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
+          data-category="home"
+          >خانه و آشپزخانه</a
+        >
+        <a
+          href="#sports"
+          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
+          data-category="sports"
+          >ورزش</a
+        >
+      </div>
+
+      <!-- Content -->
+      <div class="min-h-96">
+        <!-- اینجا محتوای دسته‌بندی‌هاست -->
+        <div id="electronics" class="category-section hidden">...</div>
+        <div id="clothing" class="category-section hidden">...</div>
+        <div id="books" class="category-section hidden">...</div>
+        <div id="home" class="category-section hidden">...</div>
+        <div id="sports" class="category-section hidden">...</div>
+      </div>
+    </div>
+
+    <!-- فایل جاوااسکریپت -->
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
