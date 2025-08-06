@@ -3,63 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فروشگاه آنلاین</title>
+    <title>جستجوی کاربران</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Vazir", sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 p-5">
-    <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-      <!-- Header -->
-      <div class="text-center mb-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">فروشگاه آنلاین</h1>
-        <p class="text-gray-600">بهترین محصولات را از ما بخرید</p>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center mb-8 text-indigo-700">
+        جستجوی کاربران
+      </h1>
+
+      <div class="flex justify-center mb-6">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="نام کاربر را وارد کنید..."
+          class="w-full md:w-2/3 px-4 py-3 border border-indigo-300 rounded-2xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+        />
       </div>
 
-      <!-- Categories -->
-      <div class="flex flex-wrap gap-3 mb-8 justify-center">
-        <a
-          href="#electronics"
-          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
-          data-category="electronics"
-          >الکترونیک</a
-        >
-        <a
-          href="#clothing"
-          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
-          data-category="clothing"
-          >پوشاک</a
-        >
-        <a
-          href="#books"
-          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
-          data-category="books"
-          >کتاب</a
-        >
-        <a
-          href="#home"
-          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
-          data-category="home"
-          >خانه و آشپزخانه</a
-        >
-        <a
-          href="#sports"
-          class="category-btn px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition-colors"
-          data-category="sports"
-          >ورزش</a
-        >
+      <div id="loading" class="text-center text-blue-600 hidden">
+        <div class="text-sm animate-pulse">در حال جستجو...</div>
       </div>
 
-      <!-- Content -->
-      <div class="min-h-96">
-        <!-- اینجا محتوای دسته‌بندی‌هاست -->
-        <div id="electronics" class="category-section hidden">...</div>
-        <div id="clothing" class="category-section hidden">...</div>
-        <div id="books" class="category-section hidden">...</div>
-        <div id="home" class="category-section hidden">...</div>
-        <div id="sports" class="category-section hidden">...</div>
+      <div id="noResults" class="text-center text-red-600 hidden mt-6">
+        کاربری با این مشخصات پیدا نشد.
+      </div>
+
+      <div
+        id="results"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 hidden"
+      >
+        <div
+          id="userCards"
+          class="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6"
+        ></div>
       </div>
     </div>
 
-    <!-- فایل جاوااسکریپت -->
-    <script type="module" src="/main.js"></script>
+    <!-- اتصال به main.js -->
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
